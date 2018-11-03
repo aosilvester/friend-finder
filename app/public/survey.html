@@ -6,12 +6,16 @@
   <meta charset="UTF-8">
   <title>FriendFinder</title>
 
-  <!-- CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- jQuery -->
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 
@@ -34,7 +38,7 @@
     <hr>
 
     <h3><strong>Question 1</strong></h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h4>Dinner and a movie is the best kind of date</h4>
     <select id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -45,7 +49,7 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+    <h4>I make my dinner every night</h4>
     <select id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -57,7 +61,7 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+    <h4>There is no room in my life for someone who doesnt apply themself</h4>
     <select id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -69,7 +73,7 @@
 
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
+    <h4>My Ideal mate has great grammar</h4>
     <select id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -81,7 +85,7 @@
 
 
     <h3><strong>Question 5</strong></h3>
-    <h4>People can rarely upset you.</h4>
+    <h4>I love sitting in front of a computer and coming up with friend questions for my homework</h4>
     <select id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -93,7 +97,7 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+    <h4>question 6 is my favorite</h4>
     <select id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -105,7 +109,7 @@
 
 
     <h3><strong>Question 7</strong></h3>
-    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+    <h4>Saturday classes are better than Tuesday and Thursday classes</h4>
     <select id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -116,7 +120,7 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
+    <h4>This question is intentionally not a question</h4>
     <select id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -127,7 +131,7 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+    <h4>Opinions are dumb and overrated</h4>
     <select id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -138,7 +142,7 @@
     </select>
 
     <h3><strong>Question 10</strong></h3>
-    <h4>You feel more energetic after spending time with a group of people.</h4>
+    <h4>My kid is better than your kid</h4>
     <select id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -152,7 +156,9 @@
     <br>
 
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" 
+   
+    ><i class="fa fa-check-circle" aria-hidden="true"></i>
      Submit</button>
 
     <hr>
@@ -210,43 +216,31 @@
         ]
       };
 
-      // var userFriendScore = 
-      // userData.scores.reduce(add, 0)
-      
-      // function add(a, b) {
-      //   return a + b;
-      // };
 
       console.log("user data: " + userData);
-      // console.log("user friend score: " + userFriendScore);
-
-
-
-
 
     $.get("/api/friends", function(data){
       console.log(data);
       console.log("userdata name: " + userData)
       console.log("data length " + data.length);
-      
-    // var friendScores=[];
 
-      // for (i=0; i< data.length; i ++){
-      //   // console.log("data length for loop");
-      //   // console.log(data[i].name)
-      //   // checkedFriendScore =  data[i].scores.reduce(add, 0)
-      //   friendScores.push(parseInt(checkedFriendScore));
-      //       }
-    // console.log(friendScores);
     });
     // AJAXing the data to friends API
-      
+  
+
       // grabs result of best match and displays it on page
     $.post("/api/friends", userData, function(data){
       $("#match-name").text(data.name);
       $("match-img").attr("src", data.photo);
+      console.log(data.photo);
       // shows the results modal
-      // $("#results-modal").modal("toggle");
+      $("#results-modal").modal("toggle");
+      // alert(`
+      //   You matched with 
+      //     ${data.name}
+          
+      
+      // `)
       console.log(data);
 
  
