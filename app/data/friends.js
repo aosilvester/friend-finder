@@ -1,3 +1,5 @@
+console.log("connecting to friends.js page");
+
 var friends = [
 {
   "name":"Ahmed",
@@ -47,9 +49,9 @@ var friends = [
         5
       ]
   }
-
-
 ]
 // genie from aladdin
 // raphael from ninja turtles
 // joker from tim burton batman
+
+module.exports = friends;

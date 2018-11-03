@@ -19,9 +19,9 @@ app.use(express.json());
 
 // what all do i need to requre? answer: js files
 
-require("./data/friends.js");
-require("./routing/apiRoutes.js");
-require("./routing/htmlRoutes.js");
+require("./app/data/friends.js");
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 
