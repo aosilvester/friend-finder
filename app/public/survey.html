@@ -231,7 +231,7 @@
       // grabs result of best match and displays it on page
     $.post("/api/friends", userData, function(data){
       $("#match-name").text(data.name);
-      $("match-img").attr("src", data.photo);
+      $("#match-img").attr("src", data.photo);
       console.log(data.photo);
       // shows the results modal
       $("#results-modal").modal("toggle");
